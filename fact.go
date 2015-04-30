@@ -1,10 +1,10 @@
-package main
+package fact
 
 import (
-	"flag"
-	"fmt"
+	// "flag"
+	// "fmt"
 	"math/big"
-	"time"
+	// "time"
 )
 
 func FactNative(n int64) (ret *big.Int) {
@@ -48,16 +48,16 @@ func FactTree(n int64) *big.Int {
 	return prodTree(2, n)
 }
 
-func main() {
+// func main() {
 
-	numbPtr := flag.Int("n", 42, "an int")
-	flag.Parse()
+// 	numbPtr := flag.Int("n", 42, "an int")
+// 	flag.Parse()
 
-	var N = int64(*numbPtr)
+// 	var N = int64(*numbPtr)
 
-	t := time.Now()
+// 	t := time.Now()
 
-	mybig1 := FactTree(N)
-	fmt.Println("Время поиска: ", time.Since(t))
-	fmt.Println(mybig1.String())
-}
+// 	mybig1 := FactTree(N)
+// 	fmt.Println("Время поиска: ", time.Since(t))
+// 	fmt.Println(mybig1.String())
+// }
