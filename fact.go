@@ -14,6 +14,7 @@ func FactNative(n int64) (ret *big.Int) {
 	for i := big.NewInt(2); N.Cmp(i) == 1 || N.Cmp(i) == 0; i.Add(i, one) {
 		ret.Mul(ret, i)
 	}
+
 	return
 }
 
